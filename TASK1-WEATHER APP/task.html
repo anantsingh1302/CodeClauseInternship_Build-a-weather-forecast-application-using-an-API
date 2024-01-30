@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background: linear-gradient(to right, #FFD1DC, #B0E0E6, #98FB98);">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TASK-1</a>
+          <form class="d-flex" role="search">
+            <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="my-4 text-center">Weather for <span id="cityName" > </span> </h1>
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Temperatures</h4>
+              </div>
+              <div class="card-body">
+                <div><img src="https://images.ctfassets.net/hrltx12pl8hq/3PHSQUIo1jOzeug2XNNSjk/cb4f9c298aaf7dfc4a68e03d1e11f5fd/sun-images.jpg?fit=fill&w=600&h=400" alt="temp" height="80"></div>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Temperature is : <span id="temp"></span></li>
+                  <li>Min Temperature is :<span id="min_temp"></span></li>
+                  <li>Max Temperature is :<span id="max_temp"></span></li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Humidity INFO</h4>
+              </div>
+              <div class="card-body">
+                <div><img src="https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2013/02/thumb_720_450_881.jpg" alt="temp" height="80"></div>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Cloud PCT is : <span id="cloud_pct"></span></li>
+                  <li>Feels Like is : <span id="feels_like"></span></li>
+                  <li>Humidity is : <span id="humidity"></span></li>
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">WIND INFO</h4>
+              </div>
+              <div class="card-body">
+                <div><img src="https://media.istockphoto.com/id/1482642499/photo/a-tree-bent-from-the-force-of-the-wind.webp?b=1&s=170667a&w=0&k=20&c=HEwZOVlr4kaVl9br6TNQ0oXfZqISh3pWqnUz-XiiLrw=" alt="temp" height="80"></div>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind Speed is : <span id="wind_speed"></span></li>
+                    <li>Wind Degree is <span id="wind_degrees"></span></li>
+                    <li>Sunrise is : <span id="sunrise"></span></li>
+                    <li>Sunset is : <span id="sunset"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="display-6 text-center mb-4">Weather of Other Cities</h2>
+
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 10%"></th>
+                <th style="width: 0%">Cloud_pct</th>
+                <th style="width: 10%">Temp</th>
+                <th style="width: 10%">Feels_like</th>
+                <th style="width: 10%">Humidity</th>
+                <th style="width: 10%">Min_temp</th>
+                <th style="width: 10%">Max_temp</th>
+                <th style="width: 10%">Wind_speed</th>
+                
+                <th style="width: 10%">Sunrise</th>
+                <th style="width: 10%">Sunset</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Delhi</th>
+                <td><span id="cloud_pct1"></span></td>
+                <td><span id="temp1"></span></td>
+                <td><span id="feels_like1"></span></td>
+                <td><span id="humidity1"></span></td>
+                <td><span id="min_temp1"></span></td>
+                <td><span id="max_temp1"></span></td>
+                <td><span id="wind_speed1"></span></td>
+                <td><span id="sunrise1"></span></td>
+                <td><span id="sunset1"></span></td>
+                
+                
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Punjab</th>
+                <td><span id="cloud_pct2"></span></td>
+                <td><span id="temp2"></span></td>
+                <td><span id="feels_like2"></span></td>
+                <td><span id="humidity2"></span></td>
+                <td><span id="min_temp2"></span></td>
+                <td><span id="max_temp2"></span></td>
+                <td><span id="wind_speed2"></span></td>
+                <td><span id="sunrise2"></span></td>
+                <td><span id="sunset2"></span></td>
+                
+                
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="task.js"></script>
+  </body>
+</html>
